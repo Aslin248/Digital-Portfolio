@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aslin Liza - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #f0db4f;
+        }
+
+        /* Section Styles */
+        .section-content {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .section-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            color: #f0db4f;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 10px;
+            margin: 5px auto;
+            border-radius: 5px;
+            width: fit-content;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        ul li:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Resume Button */
+        .resume-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #f0db4f;
+            color: #222;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .resume-button:hover {
+            background: #ffea00;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Aslin Liza</h1>
+        <p>Frontend Developer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a frontend developer with one year of experience, passionate about creating high-performance web applications. 
+               My main interests include web development and enhancing user experience through efficient UI designs.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p><b>Mar Gregorios College, Madras University</b></p>
+            <p>B.Sc. Computer Science (2023 - 2026)</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-content">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <h2>Non-Technical Skills</h2>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Communication</li>
+                <li>Logical Thinking</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Personal Portfolio</a></li>
+                <li><a href="#">E-commerce Website</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="section-content">
+            <h2>Resume</h2>
+            <a href="https://drive.google.com/your-resume-link" target="_blank" class="resume-button">Download CV</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Aslin Liza</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling effect
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
