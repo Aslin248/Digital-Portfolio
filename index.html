@@ -20,6 +20,18 @@
             padding: 3rem 0;
             font-size: 2rem;
             font-weight: bold;
+            position: relative;
+        }
+
+        .profile-picture {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
         }
 
         /* Navigation */
@@ -133,6 +145,7 @@
 
     <!-- Header -->
     <header>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
         <h1>Aslin Liza</h1>
         <p>Frontend Developer</p>
     </header>
